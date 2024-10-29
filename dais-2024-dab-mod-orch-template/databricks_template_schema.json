@@ -1,0 +1,11 @@
+{
+    "properties": {
+      "project_name": {
+        "type": "string",
+        "default": "modular-orchestration",
+        "description": "Modular Orchestration",
+        "order": 1
+      }
+    }
+  }
+  
