@@ -1,0 +1,33 @@
+# The main job for {{.project_name}}
+resources:
+  jobs:
+    {{.project_name}}_job_1:
+        name: {{.project_name}}_job_1
+        timeout_seconds: 7200
+        tasks:
+          - task_key: Ingest_Source_1
+            notebook_task:
+              notebook_path: ../src/Ingest Source 1.ipynb
+              base_parameters:
+                test_value: "true" 
+              source: WORKSPACE
+            existing_cluster_id: xxxx-xxxxxx-xxxxxxxx
+    {{.project_name}}_job_2:
+        name: {{.project_name}}_job_2
+        timeout_seconds: 7200
+        tasks:
+          - task_key: Ingest_Source_2
+            notebook_task:
+              notebook_path: ../src/Ingest Source 2.ipynb
+              source: WORKSPACE
+            existing_cluster_id: xxxx-xxxxxx-xxxxxxxx
+    {{.project_name}}_job_3:
+        name: {{.project_name}}_job_3
+        timeout_seconds: 7200
+        tasks:
+          - task_key: Clean_Data
+            notebook_task:
+              notebook_path: ../src/Clean Data.ipynb
+              source: WORKSPACE
+            existing_cluster_id: xxxx-xxxxxx-xxxxxxxx
+      
