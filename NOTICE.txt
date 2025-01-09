@@ -1,3 +1,25 @@
 ## Support
+Copyright (2024) Databricks, Inc.
+This Software includes software developed at Databricks (https://www.databricks.com/) and its use is subject to the included LICENSE file.
+
 Databricks does not offer official support for Databricks Solutions and its repository.
-For any issue with this assets or the demos installed, please open an issue using github and the team will have a look on a best effort basis.
+For any issue with these assets or the demos installed, please open an issue using github and the team will have a look on a best effort basis.
+
+_____________
+This Software contains code from the following open source projects, licensed under the MIT License:
+
+pytest-dev/pytest - https://github.com/pytest-dev/pytest
+Copyright (c) 2004 Holger Krekel and others
+
+________________
+This Software contains code from the following open source projects, licensed under the BSD 3-Clause license (https://opensource.org/license/bsd-3-clause):
+
+pandas-dev/pandas - https://github.com/pandas-dev/pandas
+Copyright (c) 2008-2011, AQR Capital Management, LLC, Lambda Foundry, Inc. and PyData Development Team
+All rights reserved.
+
+Copyright (c) 2011-2025, Open source contributors.
+
+scikit-learn/scikit-learn - https://github.com/scikit-learn/scikit-learn
+Copyright (c) 2007-2024 The scikit-learn developers.
+All rights reserved.
