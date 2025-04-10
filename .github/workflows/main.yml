@@ -40,7 +40,7 @@ jobs:
       
       - uses: databricks/setup-cli@main
 
-      - run: databricks bundle deploy --target dev
+      - run: databricks bundle deploy --target dev --auto-approve
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN_TST }}
