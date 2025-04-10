@@ -23,7 +23,7 @@ jobs:
     environment: test
     defaults:
       run:
-        working-directory: ./flights-simple
+        working-directory: /flights-simple
   
     steps:
 
