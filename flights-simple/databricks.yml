@@ -9,7 +9,7 @@ include:
 
 variables:
   catalog:
-    default: "main"
+    default: "taran_explore"
   database:
     default: ${resources.schemas.project_schema.name}
   flights_dlt_schema:
@@ -40,8 +40,7 @@ targets:
     mode: development
     default: true
     workspace:
-      host: https://company-dev.cloud.databricks.com/
-
+      host: https://e2-demo-field-eng.cloud.databricks.com
     # resource override
     ## Only create this schema in dev, for other targets manage with Terraform.
     resources:
@@ -56,33 +55,7 @@ targets:
     # the same user (Service Principal) ever time.
     mode: production
     workspace:
-      host: https://company-tst.cloud.databricks.com/
-      root_path: /Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
-    run_as:
-      user_name: ${workspace.current_user.userName}
-    variables:
-      database: flights_${bundle.target}
-      flights_dlt_schema: flights_dlt_${bundle.target}
-      flights_test_schema: flights_validation_${bundle.target}
-
-  test_automated:
-    # For test/staging deployments, we only have a single copy, so we should deploy as 
-    # the same user (Service Principal) ever time.
-    mode: production
-    workspace:
-      root_path: /Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
-    run_as:
-      user_name: ${workspace.current_user.userName}
-    variables:
-      database: flights_${bundle.target}
-      flights_dlt_schema: flights_dlt_${bundle.target}
-      flights_test_schema: flights_validation_${bundle.target}
-      node_type_id: Standard_DS3_v2
-
-  staging:
-    mode: production
-    workspace:
-      host: https://company-stg.cloud.databricks.com/
+      host: https://e2-demo-field-eng.cloud.databricks.com
       root_path: /Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
     run_as:
       user_name: ${workspace.current_user.userName}
@@ -95,7 +68,7 @@ targets:
   prod:
     mode: production
     workspace:
-      host: https://company-prd.cloud.databricks.com/
+      host: https://adb-984752964297111.11.azuredatabricks.net
       root_path: /Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
     run_as:
       # This can run as a specific user or service principal in production.
