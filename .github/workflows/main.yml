@@ -23,7 +23,7 @@ jobs:
     environment: test
     defaults:
       run:
-        working-directory: flights-simple
+        working-directory: "/Users/taranpreetsingh.grover/Documents/VSCode Workspaces/Git Repos/dabs-exampled/databricks-dab-examples-1/flights-simple"
   
     steps:
 
