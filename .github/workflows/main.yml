@@ -66,7 +66,7 @@ jobs:
     environment: test
     defaults:
       run:
-        working-directory: .
+        working-directory: ./flights-simple
 
     needs:
       - deploy
