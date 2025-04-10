@@ -34,6 +34,7 @@ display(df)
 # MAGIC ## Transform data
 
 # COMMAND ----------
+
 df_transformed = (
         df.transform(flight_transforms.delay_type_transform)
           .transform(shared_transforms.add_metadata_columns)
@@ -48,3 +49,7 @@ df_transformed = (
 
 df_transformed.write.format("delta").mode("append").saveAsTable(raw_table_name)
 print(f"Succesfully wrote data to {raw_table_name}")
+
+# COMMAND ----------
+
+print("Notebook ends here.")

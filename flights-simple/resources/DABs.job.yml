@@ -1,0 +1,16 @@
+resources:
+  jobs:
+    DABs:
+      name: DABs
+      tasks:
+        - task_key: Tests
+          notebook_task:
+            notebook_path: /Workspace/Users/taranpreetsingh.grover@databricks.com/databricks-dab-examples/flights-simple/src/flights_main_dlt
+            source: WORKSPACE
+          environment_key: Default
+      queue:
+        enabled: true
+      environments:
+        - environment_key: Default
+          spec:
+            client: "2"
