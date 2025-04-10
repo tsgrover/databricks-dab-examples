@@ -19,7 +19,7 @@ on:
 jobs:
   deploy:
     name: "Classic Job"
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     environment: test
     defaults:
       run:
